@@ -73,7 +73,7 @@ REST API responsible for business rules, authentication, authorization, data per
 
 Web application responsible for the user interface and interaction with the system.
 
-[GarageFlow Frontend](FRONTEND_REPOSITORY_URL)
+[GarageFlow Frontend](https://github.com/GarageFlow-Gerenciamento-De-Oficinas/Frontend)
 
 ---
 
@@ -137,8 +137,8 @@ Additional modules are planned as the project evolves.
 
 Each repository contains its own documentation, including setup instructions, architecture details, technologies, and development guidelines.
 
-- [Backend Documentation](BACKEND_README_URL)
-- [Frontend Documentation](FRONTEND_README_URL)
+- [Backend Documentation](https://github.com/GarageFlow-Gerenciamento-De-Oficinas/Backend/blob/main/README.md)
+- [Frontend Documentation](https://github.com/GarageFlow-Gerenciamento-De-Oficinas/Frontend/blob/main/README.md)
 
 ---
 
