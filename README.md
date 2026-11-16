@@ -1,40 +1,43 @@
 # GarageFlow
 
-> Sistema de gestão para oficinas mecânicas.
+**A workshop management system designed to centralize and organize automotive repair shop operations.**
 
-O **GarageFlow** é uma aplicação desenvolvida para centralizar a operação de uma oficina mecânica, abrangendo clientes, veículos, serviços, peças, estoque, ordens de serviço, orçamentos, pagamentos e histórico operacional.
+GarageFlow is a full-stack application designed to manage the daily operations of an automotive repair shop, bringing customers, vehicles, services, parts, inventory, service orders, quotes, payments, and operational history into a single platform.
 
-O projeto foi desenvolvido como um produto completo, desde a definição das regras de negócio até a implementação da API e da aplicação web.
-
----
-
-## 📌 Sobre o projeto
-
-O sistema foi projetado para substituir processos descentralizados, como planilhas, mensagens e controles manuais, por uma operação centralizada e rastreável.
-
-### Principais funcionalidades
-
-* 👤 Gestão de usuários, grupos e permissões
-* 👥 Gestão de clientes
-* 🚗 Gestão de veículos
-* 🔧 Catálogo de serviços
-* ⚙️ Catálogo de peças
-* 📦 Controle e movimentação de estoque
-* 📋 Ordens de serviço
-* 💰 Orçamentos
-* 💳 Pagamentos e abatimentos
-* 🔄 Interrupção e regularização de serviços
-* 📜 Histórico operacional
-* 🚘 Controle de entrega de veículos
+The project covers the complete software development process, from business rule definition and system architecture to REST API development and web application implementation.
 
 ---
 
-## 🏗️ Arquitetura
+## About the project
+
+GarageFlow aims to replace fragmented workflows based on spreadsheets, messaging applications, and manual records with a centralized, structured, and traceable management system.
+
+### Planned features
+
+- User, group, and permission management
+- Customer management
+- Vehicle management
+- Service catalog
+- Parts catalog
+- Inventory management and stock movements
+- Service order management
+- Quote creation and approval workflows
+- Payments and financial adjustments
+- Service interruption and regularization
+- Operational history and auditability
+- Vehicle delivery management
+
+---
+
+## Architecture
+
+The application follows a decoupled architecture, with a React frontend communicating with a Django REST API and PostgreSQL database.
 
 ```text
 ┌─────────────────────┐
 │                     │
-│   Vue.js Frontend   │
+│   React Frontend    │
+│   TypeScript        │
 │                     │
 └──────────┬──────────┘
            │
@@ -43,91 +46,106 @@ O sistema foi projetado para substituir processos descentralizados, como planilh
 ┌─────────────────────┐
 │                     │
 │   Django Backend    │
+│   Django REST       │
+│   Framework         │
 │                     │
 └──────────┬──────────┘
            │
            ▼
 ┌─────────────────────┐
+│                     │
 │     PostgreSQL      │
+│                     │
 └─────────────────────┘
 ```
 
 ---
 
-## 📚 Repositórios
+## Repositories
 
 ### Backend
 
-API REST responsável pelas regras de negócio, autenticação, autorização, persistência e processamento das operações.
+REST API responsible for business rules, authentication, authorization, data persistence, and application operations.
 
-➡️ [garageflow-backend](https://github.com/GarageFlow-Gerenciamento-De-Oficinas/Backend)
+[GarageFlow Backend](https://github.com/GarageFlow-Gerenciamento-De-Oficinas/Backend)
 
 ### Frontend
 
-Aplicação web responsável pela interface e interação dos usuários com o sistema.
+Web application responsible for the user interface and interaction with the system.
 
-➡️ [garageflow-frontend]()
+[GarageFlow Frontend](FRONTEND_REPOSITORY_URL)
 
 ---
 
-## 🛠️ Tecnologias
+## Technology stack
 
 ### Backend
 
-* Python
-* Django
-* Django REST Framework
-* PostgreSQL
-* Docker
+- Python
+- Django
+- Django REST Framework
+- PostgreSQL
+- Simple JWT
+- drf-spectacular
+- Docker
 
 ### Frontend
 
-* Vue.js
-* JavaScript / TypeScript
-* [Adicionar bibliotecas utilizadas]
+- React
+- TypeScript
+- Vite
+- React Router
+- Sass
+- Vitest
+- React Testing Library
+- Mock Service Worker (MSW)
 
 ---
 
-## 🧠 Principais desafios técnicos
+## Engineering challenges
 
-O projeto possui foco especial em regras de negócio, consistência e integridade dos dados.
+GarageFlow places particular emphasis on business rules, data consistency, and system integrity.
 
-Entre os principais desafios estão:
+Some of the main engineering challenges addressed by the project include:
 
-* Controle de permissões baseado em grupos
-* Histórico imutável de operações
-* Preservação de valores históricos de serviços e peças
-* Reserva e consumo de estoque
-* Controle de concorrência nas reservas
-* Fluxos de aprovação e rejeição de orçamento
-* Ordens de serviço complementares
-* Interrupção e regularização de serviços
-* Controle financeiro com pagamentos e abatimentos
-* Regras de consistência para entrega do veículo
+- Group-based access control and permissions
+- Immutable operational history and auditability
+- Preservation of historical service and parts prices
+- Inventory reservation and consumption workflows
+- Concurrency control during stock reservations
+- Quote approval and rejection workflows
+- Complementary service orders
+- Service interruption and regularization
+- Financial control, including payments and adjustments
+- Business rules ensuring consistency before vehicle delivery
 
----
-
-## 🗺️ Status do projeto
-
-🚧 **Em desenvolvimento**
-
-O projeto está sendo desenvolvido incrementalmente, começando pela API e posteriormente integrando a aplicação frontend.
+These requirements influence the system architecture and guide the implementation of its backend and frontend components.
 
 ---
 
-## 📖 Documentação
+## Project status
 
-A documentação será expandida conforme o desenvolvimento do projeto.
+**In active development**
 
-* [Backend](SEU-LINK-BACKEND)
-* [Frontend](SEU-LINK-FRONTEND)
+GarageFlow is being developed incrementally. The backend currently provides the foundation for authentication, user management, and customer-related functionality, while the frontend is being integrated with the API.
+
+Additional modules are planned as the project evolves.
 
 ---
 
-## 👨‍💻 Autor
+## Documentation
+
+Each repository contains its own documentation, including setup instructions, architecture details, technologies, and development guidelines.
+
+- [Backend Documentation](BACKEND_README_URL)
+- [Frontend Documentation](FRONTEND_README_URL)
+
+---
+
+## Author
 
 **Jean França**
 
 Software Developer
 
-[LinkedIn](www.linkedin.com/in/jean-franca) · [GitHub]()
+[LinkedIn](https://www.linkedin.com/in/jean-franca) · [GitHub](GITHUB_PROFILE_URL)
